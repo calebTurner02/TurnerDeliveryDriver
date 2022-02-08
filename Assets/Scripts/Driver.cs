@@ -1,11 +1,12 @@
 using System.Transactions;
-//using System.Threading.Tasks.Dataflow;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Driver : MonoBehaviour
 {
+    [SerializeField] float fltSteerSpeed = 1f;
+    [SerializeField] float fltMoveSpeed = 0.01f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class Driver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, 0.1f);
-        transform.Translate(0, 0.01f, 0);
+        transform.Rotate(0, 0, fltSteerSpeed);
+        transform.Translate(0, fltMoveSpeed, 0);
     }
 }
