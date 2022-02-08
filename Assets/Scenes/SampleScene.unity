@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b4daccbfbbc954eaa3df98a5b95ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fltSteerSpeed: 1
+  fltSteerSpeed: 0.5
   fltMoveSpeed: 0.01
 --- !u!1 &519420028
 GameObject:

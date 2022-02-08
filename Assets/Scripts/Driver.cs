@@ -1,3 +1,4 @@
+//using System.ComponentModel.Schema;
 using System.Transactions;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +17,9 @@ public class Driver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, fltSteerSpeed);
-        transform.Translate(0, fltMoveSpeed, 0);
+        float fltSteerAmount = Input.GetAxis("Horizontal") * fltSteerSpeed;
+        float fltMoveAmount = Input.GetAxis("Vertical") * fltMoveSpeed ;
+        transform.Rotate(0, 0, -fltSteerAmount);
+        transform.Translate(0, fltMoveAmount, 0);
     }
 }
