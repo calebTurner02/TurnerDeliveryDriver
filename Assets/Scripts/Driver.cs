@@ -22,6 +22,7 @@ public class Driver : MonoBehaviour
         float fltMoveAmount = Input.GetAxis("Vertical") * fltMoveSpeed * Time.deltaTime;
         transform.Rotate(0, 0, -fltSteerAmount);
         transform.Translate(0, fltMoveAmount, 0);
+        //transform.LookAt(player.transform);
     }
    
 }
